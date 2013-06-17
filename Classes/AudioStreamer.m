@@ -1338,7 +1338,7 @@ cleanup:
 
 		if (discontinuous)
 		{
-			err = AudioFileStreamParseBytes(audioFileStream, length, bytes, kAudioFileStreamParseFlag_Discontinuity);
+			err = AudioFileStreamParseBytes(audioFileStream, length, bytes, 0);
 			if (err)
 			{
 				[self failWithErrorCode:AS_FILE_STREAM_PARSE_BYTES_FAILED];
